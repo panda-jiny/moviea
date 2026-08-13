@@ -59,3 +59,11 @@ function over(text, limit) {
 }
 
 movie("now_playing");
+
+window.addEventListener("pointerdown", function (e) {
+  console.log("IFRAME POINTER DOWN", e.target);
+});
+
+window.addEventListener("pointermove", function (e) {
+  console.log("IFRAME POINTER MOVE");
+});
