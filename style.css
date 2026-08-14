@@ -15,21 +15,6 @@ body {
 .tbox {
   margin: 10px auto;
   text-align: center;
-  background: linear-gradient(
-    135deg,
-    #ffd54b,
-    #4c1d95,
-    #212121,
-    #4c1d95,
-    #f4a261,
-    #fcbc89,
-    #ffd54b
-  );
-  background-size: 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: title 2.5s linear infinite;
 }
 @keyframes title {
   to {
@@ -135,27 +120,53 @@ h3 {
 }
 .tbox {
   display: flex;
-  height: 34px;
+  height: 28px;
   overflow: hidden;
+  opacity: 0.6;
 }
 .tbox div {
   display: flex;
   flex-direction: column;
+  align-items: start;
+  animation: tik 3s ease-in infinite;
+}
+@keyframes tik {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-24px);
+  }
 }
 .tbox div span {
   color: #fff;
   line-height: 100%;
   font-size: 24px;
   font-weight: bold;
+  height: 28px;
+  background: linear-gradient(
+    135deg,
+    #ffd54b,
+    #ffdd6c,
+    #f4a261,
+    #f4a261,
+    #ffd54b
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: title 2.5s linear infinite;
 }
-.t1,
-.t3,
-.t5 {
-  margin-top: -2px;
+.tbox .t2 {
+  animation-delay: 600ms;
 }
-.t2 {
-  margin-top: -14px;
+.tbox .t3 {
+  animation-delay: 1000ms;
 }
-.t4 {
-  margin-top: -16px;
+.tbox .t4 {
+  animation-delay: 1400ms;
+}
+.tbox .t5 {
+  animation-delay: 1800ms;
 }

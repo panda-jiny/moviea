@@ -55,8 +55,8 @@ render = (movieList) => {
     movieBoard.innerHTML += card;
   });
   new Swiper(".mySwiper", {
-    effect: "cards",
     grabCursor: true,
+    allowTouchMove: true,
     on: {
       touchMove() {
         console.log("move", this.translate);
