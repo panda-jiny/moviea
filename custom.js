@@ -65,16 +65,8 @@ render = (movieList) => {
   new Swiper(".mySwiper", {
     effect: "cards",
     grabCursor: true,
-    on: {
-      touchStart() {
-        console.log("SWIPER START");
-      },
-      touchMove() {
-        console.log("SWIPER MOVE");
-      },
-      touchEnd() {
-        console.log("SWIPER END");
-      },
+    touchMove() {
+      console.log("move", this.translate);
     },
   });
 };
