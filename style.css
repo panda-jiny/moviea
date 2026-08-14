@@ -90,6 +90,9 @@ h3 {
   width: 240px;
   height: 320px;
 }
+.mySwiper {
+  touch-action: none;
+}
 
 .swiper-slide {
   display: flex;
@@ -149,7 +152,9 @@ h3 {
 .t5 {
   margin-top: -2px;
 }
-.t2,
-.t4 {
+.t2 {
   margin-top: -14px;
+}
+.t4 {
+  margin-top: -16px;
 }
