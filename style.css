@@ -75,7 +75,7 @@ h3 {
   width: 240px;
   height: 320px;
 }
-.mySwiper {
+.swiper-wrapper {
   touch-action: pan-y;
 }
 
