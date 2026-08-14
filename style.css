@@ -180,4 +180,5 @@ body {
 .swiper-button-next,
 .swiper-button-prev {
   color: #fff;
+  z-index: 100;
 }
