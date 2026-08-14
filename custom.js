@@ -2,13 +2,6 @@ let movieBoard = document.querySelector("#movieBoard");
 let apikey = "bb6e4b0c3a0d75468f7b7a5c1bca2b61";
 
 // swiper card eff
-var swiper = new Swiper(".mySwiper", {
-  effect: "cards",
-  grabCursor: true,
-  touchMove() {
-    console.log("move", this.translate);
-  },
-});
 
 //서버에서 원하는 영화 가지고 오기
 movie = async (lists) => {
@@ -54,15 +47,21 @@ render = (movieList) => {
 
     movieBoard.innerHTML += card;
   });
-  new Swiper(".mySwiper", {
+  var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
     grabCursor: true,
-    allowTouchMove: true,
     on: {
       touchMove() {
         console.log("move", this.translate);
       },
     },
   });
+
+  console.log("width:", swiper.width);
+  console.log("slides:", swiper.slides.length);
+  console.log("isBeginning:", swiper.isBeginning);
+  console.log("isEnd:", swiper.isEnd);
+  console.log("allowTouchMove:", swiper.allowTouchMove);
 };
 
 function over(text, limit) {
