@@ -72,11 +72,10 @@ function over(text, limit) {
 
 movie("now_playing");
 
-const s = document.querySelector(".swiper");
+document.addEventListener("pointerdown", (e) => {
+  console.log("DOWN", e.clientX);
+});
 
-console.log("DOM slide:", s.querySelectorAll(".swiper-slide").length);
-console.log("wrapper:", s.querySelector(".swiper-wrapper"));
-console.log(
-  "wrapper children:",
-  s.querySelector(".swiper-wrapper")?.children.length,
-);
+document.addEventListener("pointermove", (e) => {
+  console.log("MOVE", e.clientX);
+});
