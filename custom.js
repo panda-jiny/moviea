@@ -31,7 +31,7 @@ render = (movieList) => {
   movieBoard.innerHTML = "";
   movieList.forEach((movie) => {
     // console.log(movie.title);
-    console.log(movie.poster_path);
+    // console.log(movie.poster_path);
 
     card = `
         <div class="card swiper-slide">
@@ -52,11 +52,11 @@ render = (movieList) => {
     grabCursor: true,
   });
 
-  console.log("width:", swiper.width);
-  console.log("slides:", swiper.slides.length);
-  console.log("isBeginning:", swiper.isBeginning);
-  console.log("isEnd:", swiper.isEnd);
-  console.log("allowTouchMove:", swiper.allowTouchMove);
+  // console.log("width:", swiper.width);
+  // console.log("slides:", swiper.slides.length);
+  // console.log("isBeginning:", swiper.isBeginning);
+  // console.log("isEnd:", swiper.isEnd);
+  // console.log("allowTouchMove:", swiper.allowTouchMove);
 };
 
 function over(text, limit) {
