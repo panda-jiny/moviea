@@ -54,6 +54,8 @@ render = (movieList) => {
   var swiper = new Swiper(".mySwiper", {
     effect: "cards",
     grabCursor: true,
+    passiveListners: false,
+    simulateTouch: true,
   });
 
   // console.log("width:", swiper.width);
