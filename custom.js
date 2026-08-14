@@ -6,8 +6,7 @@ var swiper = new Swiper(".mySwiper", {
   effect: "cards",
   grabCursor: true,
   touchMove() {
-      console.log("move", this.translate);
-    },
+    console.log("move", this.translate);
   },
 });
 
