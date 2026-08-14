@@ -71,3 +71,12 @@ function over(text, limit) {
 }
 
 movie("now_playing");
+
+const s = document.querySelector(".swiper");
+
+console.log("DOM slide:", s.querySelectorAll(".swiper-slide").length);
+console.log("wrapper:", s.querySelector(".swiper-wrapper"));
+console.log(
+  "wrapper children:",
+  s.querySelector(".swiper-wrapper")?.children.length,
+);
