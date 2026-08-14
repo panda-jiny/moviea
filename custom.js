@@ -62,6 +62,21 @@ render = (movieList) => {
 
     movieBoard.innerHTML += card;
   });
+  new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+    on: {
+      touchStart() {
+        console.log("SWIPER START");
+      },
+      touchMove() {
+        console.log("SWIPER MOVE");
+      },
+      touchEnd() {
+        console.log("SWIPER END");
+      },
+    },
+  });
 };
 
 function over(text, limit) {
@@ -70,11 +85,3 @@ function over(text, limit) {
 }
 
 movie("now_playing");
-
-window.addEventListener("pointerdown", function (e) {
-  console.log("IFRAME POINTER DOWN", e.target);
-});
-
-window.addEventListener("pointermove", function (e) {
-  console.log("IFRAME POINTER MOVE");
-});
