@@ -11,11 +11,11 @@ body {
   justify-content: center;
   height: 100vh;
 }
-h2 {
+.tbox {
   margin: 10px auto;
   text-align: center;
   background: linear-gradient(
-    to right,
+    135deg,
     #ffd54b,
     #4c1d95,
     #212121,
@@ -128,4 +128,28 @@ h3 {
   100% {
     opacity: 0;
   }
+}
+.tbox {
+  display: flex;
+  height: 34px;
+  overflow: hidden;
+}
+.tbox div {
+  display: flex;
+  flex-direction: column;
+}
+.tbox div span {
+  color: #fff;
+  line-height: 100%;
+  font-size: 24px;
+  font-weight: bold;
+}
+.t1,
+.t3,
+.t5 {
+  margin-top: -2px;
+}
+.t2,
+.t4 {
+  margin-top: -14px;
 }
