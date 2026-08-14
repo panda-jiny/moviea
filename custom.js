@@ -20,10 +20,10 @@ movie = async (lists) => {
   console.log(movieList);
   render(movieList);
 
-  new Swiper(".mySwiper", {
-    effect: "cards",
-    grabCursor: true,
-  });
+  // new Swiper(".mySwiper", {
+  //   effect: "cards",
+  //   grabCursor: true,
+  // });
 };
 
 //화면에 나타내는 함수
@@ -50,11 +50,6 @@ render = (movieList) => {
   var swiper = new Swiper(".mySwiper", {
     effect: "cards",
     grabCursor: true,
-    on: {
-      touchMove() {
-        console.log("move", this.translate);
-      },
-    },
   });
 
   console.log("width:", swiper.width);
