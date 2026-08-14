@@ -76,7 +76,7 @@ h3 {
   height: 320px;
 }
 .mySwiper {
-  touch-action: none;
+  touch-action: pan-y;
 }
 
 .swiper-slide {
@@ -87,6 +87,9 @@ h3 {
   font-weight: bold;
   color: #fff;
   position: relative;
+  box-shadow:
+    -2px -2px 4px rgba(71, 60, 19, 0.8),
+    2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .backLight {
