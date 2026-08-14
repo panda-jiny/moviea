@@ -5,6 +5,17 @@ let apikey = "bb6e4b0c3a0d75468f7b7a5c1bca2b61";
 var swiper = new Swiper(".mySwiper", {
   effect: "cards",
   grabCursor: true,
+  on: {
+    touchStart() {
+      console.log("SWIPER START");
+    },
+    touchMove() {
+      console.log("SWIPER MOVE");
+    },
+    touchEnd() {
+      console.log("SWIPER END");
+    },
+  },
 });
 
 //서버에서 원하는 영화 가지고 오기
