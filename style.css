@@ -20,14 +20,62 @@ body {
     background-position: 200%;
   }
 }
-.swiper-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
 #movieBoard {
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  width: 300px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  anchor-name: --caro;
+  scroll-snap-type: x mandatory;
+}
+.caro::-webkit-scrollbar {
+  display: none;
+}
+.caro::scroll-button(right),
+.caro::scroll-button(left) {
+  content: ">";
+  border: none;
+  background-color: #f6ff72;
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  position-anchor: --caro;
+  position-area: right center;
+  translate: -50%;
+}
+.caro::scroll-button(left) {
+  content: "<";
+  position-area: left center;
+  translate: 50%;
+}
+.caro::scroll-button(right):disabled,
+.caro::scroll-button(left):disabled {
+  opacity: 0.4;
+  cursor: auto;
+}
+.card {
+  flex: 0 0 240px;
+  scroll-snap-align: start;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  box-shadow: 2px 2px 4px rgba(71, 60, 19, 0.8);
 }
 .imgBox {
   width: 100%;
@@ -56,6 +104,7 @@ body {
 .imgBox img {
   width: 100%;
   height: 100%;
+  border-radius: 12px;
   object-fit: cover;
 }
 .imgBox h3 {
@@ -73,26 +122,6 @@ body {
 .imgBox:hover h3 {
   opacity: 1;
 }
-.swiper {
-  width: 240px;
-  height: 320px;
-}
-.swiper-wrapper {
-  touch-action: pan-y;
-}
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  font-weight: bold;
-  color: #fff;
-  position: relative;
-  box-shadow:
-    -2px -2px 4px rgba(71, 60, 19, 0.8),
-    2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
 .backLight {
   position: absolute;
   user-select: none;
@@ -176,9 +205,4 @@ body {
 }
 .tbox .t5 {
   animation-delay: 1800ms;
-}
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff;
-  z-index: 100;
 }
